@@ -1,0 +1,225 @@
+.scan {
+  min-height: 100svh;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 16px calc(24px + env(safe-area-inset-bottom));
+  background: #1c0a26;
+  color: #f1e6f7;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+}
+
+.scan-login {
+  display: grid;
+  place-items: center;
+}
+
+.scan-card {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+  text-align: center;
+}
+
+.scan-card h1 {
+  margin: 0 0 6px;
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+}
+
+.scan-brand {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #d9b45f;
+}
+
+.scan input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #5d1f78;
+  background: #2c0f3d;
+  color: inherit;
+  font: inherit;
+  font-size: 1.15rem;
+}
+
+.scan input:focus {
+  outline: 2px solid #d9b45f;
+  outline-offset: 1px;
+}
+
+.scan button {
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 12px;
+  background: #d9b45f;
+  color: #2a0b3a;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.scan button:disabled {
+  opacity: 0.6;
+}
+
+.scan-error {
+  margin: 0;
+  color: #ff9aa8;
+}
+
+.scan-error.pad {
+  padding: 12px;
+}
+
+.scan-demo {
+  margin: 8px 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(217, 180, 95, 0.14);
+  color: #e8cf8a;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.scan-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.scan-stats {
+  margin: 4px 0 0;
+  font-size: 1.3rem;
+}
+
+.scan-stats strong {
+  color: #d9b45f;
+  font-size: 1.7rem;
+}
+
+.scan .scan-sync {
+  padding: 8px 12px;
+  font-size: 0.75rem;
+  background: #ffb347;
+}
+
+.scan-viewport {
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid #5d1f78;
+  background: #000;
+  min-height: 280px;
+}
+
+.scan-manual {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.scan-manual ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.scan-manual li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #2c0f3d;
+}
+
+.scan-manual li div {
+  display: grid;
+}
+
+.scan-manual li span {
+  font-size: 0.85rem;
+  color: #b9a1c9;
+}
+
+.scan-manual li button {
+  padding: 9px 12px;
+  font-size: 0.72rem;
+}
+
+.scan .scan-refresh {
+  background: transparent;
+  border: 1px solid #5d1f78;
+  color: #cdb3dc;
+  font-size: 0.72rem;
+}
+
+.scan-result {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+  padding: 24px;
+  text-align: center;
+  color: #fff;
+}
+
+.scan-result.ok {
+  background: #14683b;
+}
+
+.scan-result.offline {
+  background: #7a5a0a;
+}
+
+.scan-result.duplicate {
+  background: #a3501a;
+}
+
+.scan-result.invalid {
+  background: #8a1c2e;
+}
+
+.scan-result p {
+  margin: 0;
+}
+
+.scan-result .big {
+  font-family: 'Cinzel', serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.scan-result .who {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.scan-result .party {
+  font-size: 1.5rem;
+}
+
+.scan-result button {
+  margin-top: 22px;
+  min-width: 220px;
+  background: #fff;
+  color: #1c0a26;
+}
