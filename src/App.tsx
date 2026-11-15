@@ -3,6 +3,7 @@ import Envelope from './components/Envelope'
 import Hero from './components/Hero'
 import Invite from './components/Invite'
 import Countdown from './components/Countdown'
+import Gallery from './components/Gallery'
 import Schedule from './components/Schedule'
 import Venues from './components/Venues'
 import Palette from './components/Palette'
@@ -30,6 +31,7 @@ export default function App() {
         <Hero play={opened} />
         <Invite />
         <Countdown />
+        <Gallery />
         <Schedule />
         <Venues />
         <Palette />

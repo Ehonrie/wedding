@@ -394,6 +394,151 @@ button {
   color: var(--gold);
 }
 
+/* portrait */
+.portrait-wrap {
+  /* extra room above and below for the floral garlands that overhang the frame */
+  margin: 64px 0 40px;
+}
+
+.portrait {
+  position: relative;
+  width: min(78%, 300px);
+  margin: 0 auto;
+  padding: 8px;
+  border: 1px solid var(--gold);
+  border-radius: 150px 150px 14px 14px; /* arched top */
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 12px 28px rgba(42, 11, 58, 0.22);
+}
+
+.portrait > img:not(.portrait-flora) {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 142px 142px 8px 8px;
+}
+
+/* floral garlands: sized and placed relative to the frame so they scale with it */
+.portrait-flora {
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  width: 114%;
+  max-width: none;
+  height: auto;
+  translate: -50% 0;
+  pointer-events: none;
+  mix-blend-mode: multiply; /* drops the white JPG background, like the hero flowers */
+}
+
+.portrait-flora.top {
+  top: -13%;
+}
+
+.portrait-flora.bottom {
+  bottom: -7%;
+}
+
+/* gallery */
+.gallery {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.gallery-grid {
+  columns: 2;
+  column-gap: 10px;
+  margin-top: 22px;
+}
+
+.gallery-item {
+  margin: 0 0 10px;
+  break-inside: avoid;
+}
+
+.gallery-item button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid rgba(201, 162, 74, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e6d9ec;
+  cursor: zoom-in;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item button:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-item button:focus-visible,
+.lightbox button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 220;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(28, 10, 38, 0.92);
+  animation: fade 0.25s ease;
+}
+
+.lightbox > img {
+  max-width: 100%;
+  max-height: 86svh;
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.lb-close,
+.lb-nav {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: rgba(75, 29, 99, 0.8);
+  color: var(--gold-light);
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lb-close {
+  top: 14px;
+  right: 14px;
+}
+
+.lb-nav {
+  top: 50%;
+  translate: 0 -50%;
+}
+
+.lb-nav.prev {
+  left: 10px;
+}
+
+.lb-nav.next {
+  right: 10px;
+}
+
 /* countdown */
 .countdown {
   background: linear-gradient(180deg, var(--paper), #eadcf0 18%, #eadcf0 82%, var(--paper));

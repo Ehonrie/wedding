@@ -64,6 +64,19 @@ export const wedding = {
   },
 
   music: '/audio/everything-is-perfect.mp3',
+
+  // Drop image files in /public/photos and list them here. Missing files are simply hidden.
+  photos: {
+    portrait: { src: '/photos/portrait.jpg', alt: 'Abigail and Praise' },
+    gallery: [
+      { src: '/photos/gallery-1.jpg', alt: 'Abigail and Praise' },
+      { src: '/photos/gallery-2.jpg', alt: 'Abigail and Praise' },
+      { src: '/photos/gallery-3.jpg', alt: 'Abigail' },
+      { src: '/photos/gallery-4.jpg', alt: 'Abigail and Praise' },
+      { src: '/photos/gallery-5.jpg', alt: 'Abigail and Praise' },
+      { src: '/photos/gallery-6.jpg', alt: 'Praise' },
+    ] satisfies { src: string; alt: string }[],
+  },
 }
 
 export type Wedding = typeof wedding

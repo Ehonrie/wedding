@@ -1,5 +1,6 @@
 import Reveal from './Reveal'
 import Divider from './Divider'
+import Portrait from './Portrait'
 import { wedding } from '../config'
 
 export default function Invite() {
@@ -16,6 +17,7 @@ export default function Invite() {
         <p className="kicker small">and</p>
         <p className="host">{hosts.familyB[0]}</p>
       </Reveal>
+      <Portrait />
       <Reveal delay={120}>
         <Divider />
         <p className="script-line">{wedding.invitationLine}</p>
